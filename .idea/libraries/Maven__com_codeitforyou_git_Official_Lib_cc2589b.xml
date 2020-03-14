@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.codeitforyou.git.Official:Lib:cc2589b">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/codeitforyou/git/Official/Lib/cc2589b/Lib-cc2589b.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/codeitforyou/git/Official/Lib/cc2589b/Lib-cc2589b-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/codeitforyou/git/Official/Lib/cc2589b/Lib-cc2589b-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

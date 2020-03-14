@@ -1,0 +1,83 @@
+settings:
+  alias:
+    - "throw"
+
+messages:
+  usageMessage: '&8[&6Throwables&8] &7Incorrect usage! &6/{command} {usage}'
+  unknownCommandMessage: '&8[&6Throwables&8] &7Unknown command!'
+  playerOnlyMessage: '&8[&6Throwables&8] &7This command can not be executed through console!'
+  noPermissionMessage: '&8[&6Throwables&8] &7You do not have permission to execute this command!'
+  reloadMessage: '&8[&6Throwables&8] &7Reloaded config in &6%time%&7s!'
+  invalidThrowable: '&8[&6Throwables&8] &7Specified throwable does not exist!'
+  helpMessage:
+    - '&8[&6Throwables&8]'
+    - ''
+    - ' &6» &fPlugin Commands'
+    - '  &8• &7%alias%'
+    - ''
+    - ' &6» &fArguments'
+    - '  &8• &7reload &8- &7Reload the plugins configuration'
+    - '  &8• &7give <type> [target] (amount) &8- &7Gives the target the specified throwable'
+    - ''
+
+throwable:
+  enableCharge: false
+
+throwables:
+  default:
+    material: "REDSTONE"
+    click_action: "LEFT_CLICK_AIR"
+    display_name: "&bDefault Throwable"
+    lore:
+      - ""
+      - " &8• &bAction&8: &fLightning"
+      - " &8• &bTimer&8: &f5 Seconds"
+      - ""
+      - " &8• &7&oLeft-Click to throw"
+      - ""
+    actions:
+      - "[message] &7You have thrown a default throwable!"
+      - "[action] LIGHTNING,5;&bStriking In&8: &f%timer%"
+  creeper:
+    material: "PIG_SPAWN_EGG"
+    click_action: "RIGHT_CLICK_AIR"
+    display_name: "&cCreeper Throwable"
+    lore:
+      - ""
+      - " &8• &bAction&8: &fExplosion"
+      - " &8• &bIntensity&8: &f3"
+      - " &8• &bTimer&8: &f5 Seconds"
+      - ""
+      - " &8• &7&oRight-Click to throw"
+      - ""
+    actions:
+      - "[message] &7You have thrown a creeper throwable!"
+      - "[action] EXPLOSION,5,3;&cExploding In&8: &f%timer%"
+  snowman:
+    material: "NETHER_STAR"
+    click_action: "LEFT_CLICK_AIR"
+    display_name: "&bSheep Throwable"
+    lore:
+      - ""
+      - " &8• &bAction&8: &fSpawn Entity"
+      - " &8• &bTimer&8: &f3 Seconds"
+      - ""
+      - " &8• &7&oLeft-Click to throw"
+      - ""
+    actions:
+      - "[message] &7You have thrown a sheep throwable!"
+      - "[action] SPAWN_ENTITY,3;&2Spawning a Snowman in &f%timer%;SNOWMAN"
+  teleporter:
+    material: "ENDER_EYE"
+    click_action: "RIGHT_CLICK_AIR"
+    display_name: "&bTeleporter"
+    lore:
+      - ""
+      - " &8• &bAction&8: &fTeleport"
+      - " &8• &bTimer&8: &f7 Seconds"
+      - ""
+      - " &8• &7&oRight-Click to throw"
+      - ""
+    actions:
+      - "[message] &7You have thrown a teleporter"
+      - "[action] TELEPORT,7;&6Teleporting in &f%timer%"

@@ -1,0 +1,11 @@
+name: Throwables
+version: ${project.version}
+main: me.frosty.throwables.Throwables
+
+permissions:
+  throwables.command.base:
+    default: op
+  throwables.command.give:
+    default: op
+  throwables.command.reload:
+    default: op
