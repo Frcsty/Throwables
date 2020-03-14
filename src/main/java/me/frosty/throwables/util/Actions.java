@@ -68,7 +68,7 @@ public class Actions
 				}
 				drop.remove();
 			}
-		}.runTaskLaterAsynchronously(plugin, timer * 20);
+		}.runTaskLater(plugin, timer * 20);
 
 		for (int i = timer; i >= 0; --i)
 		{
