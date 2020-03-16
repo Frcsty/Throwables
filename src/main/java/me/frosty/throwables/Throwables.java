@@ -11,55 +11,55 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class Throwables extends JavaPlugin
 {
 
-	private final CommandsManager        commandsManager        = new CommandsManager(this);
-	private final ActionsManager         actionsManager         = new ActionsManager(this);
-	private final PlayerInteractListener playerInteractListener = new PlayerInteractListener(this);
-	private final Actions                actions                = new Actions(this);
-	private final TabComplete            completer              = new TabComplete(this);
+    private final CommandsManager        commandsManager        = new CommandsManager(this);
+    private final ActionsManager         actionsManager         = new ActionsManager(this);
+    private final PlayerInteractListener playerInteractListener = new PlayerInteractListener(this);
+    private final Actions                actions                = new Actions(this);
+    private final TabComplete            completer              = new TabComplete(this);
 
-	@Override
-	public void onEnable()
-	{
-		saveDefaultConfig();
+    @Override
+    public void onEnable()
+    {
+        saveDefaultConfig();
 
-		// Register plugin's commands
-		commandsManager.registerCommand();
+        // Register plugin's commands
+        commandsManager.registerCommand();
 
-		// Register actions
-		actionsManager.registerActions();
+        // Register actions
+        actionsManager.registerActions();
 
-		// Register Player Interact Listener
-		getServer().getPluginManager().registerEvents(playerInteractListener, this);
+        // Register Player Interact Listener
+        getServer().getPluginManager().registerEvents(playerInteractListener, this);
 
-		// Load tab completer
-		getCommand("throwables").setTabCompleter(completer);
+        // Load tab completer
+        getCommand("throwables").setTabCompleter(completer);
 
-	}
+    }
 
-	@Override
-	public void onDisable()
-	{
-		reloadConfig();
-	}
+    @Override
+    public void onDisable()
+    {
+        reloadConfig();
+    }
 
-	public final ActionsManager getActionsManager()
-	{
-		return actionsManager;
-	}
+    public final ActionsManager getActionsManager()
+    {
+        return actionsManager;
+    }
 
-	public final Item getDrop()
-	{
-		return playerInteractListener.getDrop();
-	}
+    public final Item getDrop()
+    {
+        return playerInteractListener.getDrop();
+    }
 
-	public final Actions getActions()
-	{
-		return actions;
-	}
+    public final Actions getActions()
+    {
+        return actions;
+    }
 
-	public final CommandsManager getCommandsManager()
-	{
-		return commandsManager;
-	}
+    public final CommandsManager getCommandsManager()
+    {
+        return commandsManager;
+    }
 
 }
