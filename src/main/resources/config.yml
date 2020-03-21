@@ -81,3 +81,18 @@ throwables:
     actions:
       - "[message] &7You have thrown a teleporter"
       - "[action] TELEPORT,7;&6Teleporting in &f%timer%"
+  block_changer:
+    material: "CHEST"
+    click_action: "RIGHT_CLICK_AIR"
+    display_name: "&cBlock Changer"
+    lore:
+      - ""
+      - " &8• &bAction&8: &fChange Block"
+      - " &8• &bType&8: &fBeacon"
+      - " &8• &bTimer&8: &f4 Seconds"
+      - ""
+      - " &8• &7&oRight-Click to throw"
+      - ""
+    actions:
+      - "[message] &7You have thrown a block changer"
+      - "[action] CHANGE_BLOCK,4;&dChanging block in &f%timer%;BEACON"

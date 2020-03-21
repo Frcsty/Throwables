@@ -1,5 +1,6 @@
 package me.frosty.throwables.util;
 
+import com.codeitforyou.lib.api.xseries.XMaterial;
 import me.frosty.throwables.Throwables;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -62,6 +63,9 @@ public class Actions
                         break;
                     case "TELEPORT":
                         player.teleport(drop.getLocation());
+                        break;
+                    case "CHANGE_BLOCK":
+                        world.getBlockAt(drop.getLocation()).setType(XMaterial.valueOf(parser.getExtensiveModifier()).parseMaterial());
                         break;
                 }
                 drop.remove();

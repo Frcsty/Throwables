@@ -3,6 +3,7 @@ package me.frosty.throwables.listeners;
 import com.codeitforyou.lib.api.item.ItemUtil;
 import me.frosty.throwables.Throwables;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Item;
@@ -82,9 +83,9 @@ public class PlayerInteractListener implements Listener
 		{
 			item.setAmount(item.getAmount() - 1);
 		}
-		else if (item.getAmount() == 1)
+		else
 		{
-			item.setAmount(0);
+			item.setType(Material.AIR);
 		}
 
 		plugin.getActionsManager().getActionManager().runActions(player, actions);
